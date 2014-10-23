@@ -32,7 +32,7 @@ Cryptsy.prototype.subscribe = function(market) {
   if(market instanceof Array)
     return market.forEach(this.subscribe);
 
-  var chanName = 'trade.' + market;
+  var chanName = 'ticker.' + market;
 
   if(this.connected)
     this._subscribe(chanName);
@@ -52,7 +52,7 @@ Cryptsy.prototype._subscribe = function(market) {
 }
 
 Cryptsy.prototype.handle = function(e) {
-  this.emit('trade', e);
+  this.emit('ticker', e);
 };
 
 module.exports = Cryptsy;
