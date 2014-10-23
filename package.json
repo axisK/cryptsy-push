@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "pusher-node-client": "0.0.8",
+    "pusher-node-client": ">= 0.0.8",
     "lodash.bindall": "2.4.1"
   },
   "repository": {
